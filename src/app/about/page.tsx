@@ -12,6 +12,7 @@ import {
   Meta,
   Schema
 } from "@once-ui-system/core";
+import Image from "next/image";
 import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
@@ -195,7 +196,7 @@ export default function About() {
                     <Flex fillWidth horizontal="space-between" vertical="end" wrap={false} marginBottom="4">
                       <Flex gap="8" vertical="center">
                         {experience.logo && (
-                          <img
+                          <Image
                             src={experience.logo}
                             alt={`${experience.company} logo`}
                             style={{ width: "45px", height: "45px", objectFit: "contain" }}
@@ -260,7 +261,7 @@ export default function About() {
                     <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
                       <Flex gap="8" vertical="center">
                         {institution.logo && (
-                          <img
+                          <Image
                             src={institution.logo}
                             alt={`${institution.name} logo`}
                             style={{

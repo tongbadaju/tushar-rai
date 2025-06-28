@@ -53,8 +53,8 @@ const home = {
   },
   subline: (
     <>
-      I'm Tushar Rai, a {person.role}. With a passion for clean 
-      design and scalable code, I'm always exploring new tools, techniques, 
+      I&apos;m Tushar Rai, a {person.role}. With a passion for clean 
+      design and scalable code, I&apos;m always exploring new tools, techniques, 
       and technologies to build smarter, faster, and more engaging web 
       solutions.
     </>
