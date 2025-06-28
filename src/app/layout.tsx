@@ -98,7 +98,6 @@ export default async function RootLayout({
       </head>
       <Providers>
         <Column as="body" background="page" fillWidth style={{minHeight: "100vh"}} margin="0" padding="0" horizontal="center">
-          <BlobityClient />
           <Background
             position="fixed"
             mask={{
@@ -154,6 +153,7 @@ export default async function RootLayout({
               </Flex>
             </Flex>
             <Footer/>
+            <BlobityClient />
           </Column>
         </Providers>
       </Flex>
