@@ -196,11 +196,13 @@ export default function About() {
                     <Flex fillWidth horizontal="space-between" vertical="end" wrap={false} marginBottom="4">
                       <Flex gap="8" vertical="center">
                         {experience.logo && (
-                          <Image
-                            src={experience.logo}
-                            alt={`${experience.company} logo`}
-                            style={{ width: "45px", height: "45px", objectFit: "contain" }}
-                          />
+                        <Image
+                          src={experience.logo}
+                          alt={`${experience.company} logo`}
+                          width={45}
+                          height={45}
+                          style={{ objectFit: "contain" }}
+                        />
                         )}
                         <Column>
                           <Text id={experience.company} variant="heading-strong-l">
@@ -262,12 +264,10 @@ export default function About() {
                       <Flex gap="8" vertical="center">
                         {institution.logo && (
                           <Image
+                            width={47}
+                            height={50}
                             src={institution.logo}
                             alt={`${institution.name} logo`}
-                            style={{
-                              height: "47px",
-                              width: "50px",
-                            }}
                           />
                         )}
                         <Column>
