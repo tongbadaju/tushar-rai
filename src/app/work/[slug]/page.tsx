@@ -89,7 +89,9 @@ export default async function Project({
         <Flex gap="12" marginBottom="24" vertical="center">
           {post.metadata.team && <AvatarGroup reverse avatars={avatars} size="m" />}
           <Text variant="body-default-s" onBackground="neutral-weak">
-            {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
+              {post.metadata.publishedAt 
+              ? formatDate(post.metadata.publishedAt) 
+              : "Ongoing"}
           </Text>
         </Flex>
         <CustomMDX source={post.content} />
