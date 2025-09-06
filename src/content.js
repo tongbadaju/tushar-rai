@@ -166,25 +166,16 @@ const education = [
   {
     degree: 'BTech in Computer Science & Engineering',
     institution: 'Sikkim Manipal Institute of Technology',
-    date: 'Aug 2021 - May 2025',
+    date: '2021 - 2025',
     icon: 'images/depts/manipal.png',
     iconType: 'img',
-    bullets: [
-      'Focused on full-stack development, UI/UX, and scalable architecture.',
-      'Built multiple solo projects including dynamic galleries and public portfolios.',
-      'Explored animation, routing, and responsive design best practices.',
-    ],
   },
   {
-    degree: 'Higher Secondary Education',
-    institution: 'Namchi Senior Secondary School',
+    degree: 'Intermediate Education',
+    institution: 'Govt. Senior Secondary School, Sadam',
     date: '2019 - 2021',
-    icon: 'svg',
-    iconType: 'svg',
-    bullets: [
-      'Studied foundational computer science and mathematics.',
-      'Participated in coding competitions and tech clubs.',
-    ],
+    icon: 'images/depts/sikkim-seal.png',
+    iconType: 'img',
   },
 ]
 

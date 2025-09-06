@@ -133,43 +133,36 @@ export default function About() {
                 <div className="grid md:grid-cols-2 gap-8 md:gap-8 lg:gap-20 md:items-start max-w-6xl w-full mx-auto px-4">
                     <h1 className="block text-3xl font-semibold sm:text-4xl lg:text-6xl lg:leading-tight text-primary heading-text">My Education</h1>
 
-                    <div>
-                    {education.map((edu, index) => (
-                        <div key={index} className="group relative flex gap-x-5">
-                        <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-gray-200">
-                            <div className="relative z-10 size-8 flex justify-center items-center">
-                            {edu.iconType === 'svg' ? (
-                                <svg className="shrink-0 size-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M12 12h.01" />
-                                <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-                                <path d="M22 13a18.15 18.15 0 0 1-20 0" />
-                                <rect width="20" height="14" x="2" y="6" rx="2" />
-                                </svg>
-                            ) : (
-                                <img src={edu.icon} alt={edu.institution} />
-                            )}
-                            </div>
-                        </div>
+<div>
+  {education.map((edu, index) => (
+    <div key={index} className="group relative flex gap-x-5">
+      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-gray-200">
+        <div className="relative z-10 size-8 flex justify-center items-center">
+          {edu.iconType === 'svg' ? (
+            <svg className="shrink-0 size-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 12h.01" />
+              <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+              <path d="M22 13a18.15 18.15 0 0 1-20 0" />
+              <rect width="20" height="14" x="2" y="6" rx="2" />
+            </svg>
+          ) : (
+            <img src={edu.icon} alt={edu.institution} />
+          )}
+        </div>
+      </div>
 
-                        <div className="grow pb-8 group-last:pb-0">
-                            <div className="flex justify-between flex-col md:flex-row mb-1 text-sm">
-                            <p className="font-semibold text-base">{edu.degree}</p>
-                            <p className="mb-1 text-sm">{edu.date}</p>
-                            </div>
+      <div className="grow pb-8 group-last:pb-0">
+        <div className="flex justify-between flex-col md:flex-row mb-1 text-sm">
+          <p className="font-semibold text-base">{edu.degree}</p>
+          <p className="mb-1 text-sm">{edu.date}</p>
+        </div>
 
-                            <p className="mb-1 text-sm text-[var(--color-primary)] font-medium">{edu.institution}</p>
+        <p className="mb-1 text-sm text-[var(--color-primary)] font-medium">{edu.institution}</p>
+      </div>
+    </div>
+  ))}
+</div>
 
-                            {edu.bullets.length > 0 && (
-                            <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                                {edu.bullets.map((point, i) => (
-                                <li key={i} className="ps-1 text-sm">{point}</li>
-                                ))}
-                            </ul>
-                            )}
-                        </div>
-                        </div>
-                    ))}
-                    </div>
                 </div>
             </section>
 
