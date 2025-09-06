@@ -5,17 +5,16 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
+    { label: 'Home', path: '/' },
     { label: 'About', path: '/about' },
-    { label: 'Work', path: '/work' },
-    { label: 'Testimonials', path: '/testimonials' },
-    { label: 'Contact', path: '/contact' },
+    { label: 'Works', path: '/works' },
   ];
 
   return (
     <header className="flex flex-wrap md:flex-nowrap z-50 w-full">
-      <nav className="relative max-w-[85rem] w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 py-2 px-4 sm:px-6 lg:px-8">
+      <nav className="relative max-w-[85rem] w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 py-2 px-4 sm:px-6 lg:px-8 border-b border-neutral-700 md:border-0">
         <div className="flex justify-between items-center">
-          <NavLink to="/" className="font-semibold text-2xl heading-text" aria-label="Tushar">
+          <NavLink to="/" className="font-semibold text-2xl" aria-label="Tushar">
             {"<tr/>"}
           </NavLink>
 
@@ -51,7 +50,7 @@ export default function Header() {
                       key={label}
                       to={path}
                       className={({ isActive }) =>
-                        `p-2 flex items-center rounded-lg ${isActive ? 'bg-gray-100 text-black' : 'text-white hover:text-[var(--color-primary)]'}`
+                        `p-2 flex items-center rounded-lg ${isActive ? 'text-[var(--color-primary)]' : 'text-white hover:text-[var(--color-primary)]'}`
                       }
                     >
                       {label}
@@ -59,15 +58,6 @@ export default function Header() {
                   ))}
                 </div>
               </div>
-
-                <div>
-{/*                     <a
-                        href="https://github.com/tongbadaju"
-                        className="w-auto inline-flex items-center text-sm py-2 px-2.5 rounded-lg bg-[var(--color-primary)] text-white hover:bg-blue-700"
-                    >
-                        Download CV
-                    </a> */}
-                </div>
 
             </div>
           </div>

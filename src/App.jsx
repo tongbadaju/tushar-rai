@@ -4,6 +4,8 @@ import './App.css'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Works from './pages/Works';
+import About from './pages/About';
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
   
           <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/works" element={<Works />} />
           </Routes>
        
         </main>

@@ -4,11 +4,14 @@ const profile = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  avatar: '/images/avatar.jpg',
+  avatar: '/images/avatar.png',
   email: 'tusharrai818@gmail.com',
+  location: 'Namchi, Sikkim',
+  resume: 'https://docs.google.com/document/d/1ytMx7Oq-ETl0cuIbMUBrXwM6Nl0pJjSCGPErV9S6-XI/edit?usp=sharing'
 };
 
 const about = {
+  description: "I am a front-end developer based in Namchi looking for exciting opportunities. Has Computer Science and Engineering background. Likes to focus on accessibility when developing. Passionate and curious about solving problems. Currently, I'm exploring Reactjs. While I am not programming, I enjoy going on rides and gym. Learning more to improve skill.",
   shortDescription: "A Sikkim based front-end developer passionate about building accessible and user friendly websites."
 };
 
@@ -36,73 +39,67 @@ const skills = [
     {
         name: 'c',
         icon: 'icons/c.svg',
-        site: '',
+        site: 'https://www.c-language.org/',
     },
     {
         name: 'css',
         icon: 'icons/css.svg',
-        site: '',
+        site: 'https://www.w3.org/Style/CSS/Overview.en.html',
     },
     {
         name: 'figma',
         icon: 'icons/figma.svg',
-        site: '',
+        site: 'https://www.figma.com/',
     },
     {
         name: 'git',
         icon: 'icons/git.svg',
-        site: '',
+        site: 'https://git-scm.com/',
     },
     {
         name: 'github',
         icon: 'icons/github.svg',
-        site: '',
+        site: 'https://github.com/',
     },
     {
         name: 'html',
         icon: 'icons/html.svg',
-        site: '',
+        site: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
     },
     {
         name: 'javascript',
         icon: 'icons/javascript.svg',
-        site: '',
+        site: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
     },
     {
         name: 'postgresql',
         icon: 'icons/postgresql.svg',
-        site: '',
+        site: 'https://www.postgresql.org/',
     },
-
     {
         name: 'postman',
         icon: 'icons/postman.svg',
-        site: '',
-    },
-    {
-        name: 'python',
-        icon: 'icons/python.svg',
-        site: '',
+        site: 'https://www.postman.com/',
     },
     {
         name: 'react',
         icon: 'icons/react.svg',
-        site: '',
+        site: 'https://react.dev/',
     },
     {
         name: 'sass',
         icon: 'icons/sass.svg',
-        site: '',
+        site: 'https://sass-lang.com/',
     },
     {
         name: 'tailwindcss',
         icon: 'icons/tailwindcss.svg',
-        site: '',
+        site: 'https://tailwindcss.com/',
     },
     {
         name: 'typescript',
         icon: 'icons/typescript.svg',
-        site: '',
+        site: 'https://www.typescriptlang.org/',
     },    
 ]
 
@@ -110,24 +107,92 @@ const works = [
   {
     title: 'Kotha Property Platform',
     description:
-      'Independently architected a scalable full-stack rental platform featuring a modular frontend and secure backend infrastructure. Designed accessible, responsive user interfaces and built dynamic property listings with role-based dashboards. Developed API-driven lease workflows to streamline operations and deliver a seamless user experience across devices.',
+      'Independently designed and developed a scalable full-stack rental platform with a modular frontend and secure backend. Designed responsive, accessible UIs and developed dynamic property listings with role-based dashboards. API-driven lease workflows streamlined operations and improved the user experience across devices.',
     year: 2025,
     role: 'Full-Stack Developer',
-    image: 'images/works/work.png',
-    demo: 'https://your-demo-link.com',
-    github: 'https://github.com/your-repo',
+    image: 'images/works/kotha.png',
+    github: 'https://github.com/tongbadaju/kotha',
+    techStack: 'Angular, TailwindCSS, Django, PostgreSQL'
   },
   {
-    title: 'Adventure Time Promo',
+    title: 'Excise Dept Website Revamp',
     description:
-      'Teamed up with a designer to breathe life into a promotional webpage for our favorite show, Adventure Time. Delivered a fully responsive design with dynamic content capabilities, seamlessly integrating a newsletter feature to keep fans updated with the latest adventures.',
-    year: 2023,
+      "Collaborated with a team to revamp the Government of Sikkim's Excise Department website, delivering a scalable full-stack solution. Built secure, role-based dashboards and a responsive, accessible UI. Automated license workflows with API-driven forms and dynamic data handling and improved the overall user experience.",
+    year: 2025,
     role: 'Front-end Developer',
-    image: 'images/works/work.png',
-    demo: 'https://your-demo-link.com',
-    github: 'https://github.com/your-repo',
+    image: 'images/works/excise.png',
+    techStack: 'Angular, Django, PostgreSQL'
   },
-  
+  {
+    title: 'Designer Portfolio',
+    description:
+      "Designed and developed a personal portfolio for a professional graphic designer.",
+    year: 2025,
+    role: 'Front-end Developer',
+    image: 'images/works/niten-design.png',
+    demo: 'https://niten-design.vercel.app',
+    github: 'https://github.com/tongbadaju/niten.design',
+    techStack: 'React, TailwindCSS'
+  },
 ];
 
-export { profile, about, skills, works, social};
+const experiences = [
+  {
+    title: 'Freelance Developer',
+    date: 'July 2025 - Present',
+    description: 'Working as an independent freelance developer. Exploring and learning new technologies.',
+    icon: 'svg', 
+    iconType: 'svg',
+    organization: '',
+    bullets: [],
+  },
+  {
+    title: 'Freelance Developer',
+    date: 'July 2025 - Present',
+    description: '',
+    icon: 'images/depts/nic.png',
+    iconType: 'img',
+    organization: 'National Informatics Center, Sikkim State Unit',
+    bullets: [
+      'Collaborated with a team to revamp the official Excise Department website.',
+      'Modernized its infrastructure and user interface for better performance and accessibility.',
+      'Built role-based secure dashboards and responsive UI compliant with accessibility standards.',
+      'Automated license application workflows with API-driven forms and dynamic data handling.',
+    ],
+  },
+]
+
+const education = [
+  {
+    degree: 'BTech in Computer Science & Engineering',
+    institution: 'Sikkim Manipal Institute of Technology',
+    date: 'Aug 2021 - May 2025',
+    icon: 'images/depts/manipal.png',
+    iconType: 'img',
+    bullets: [
+      'Focused on full-stack development, UI/UX, and scalable architecture.',
+      'Built multiple solo projects including dynamic galleries and public portfolios.',
+      'Explored animation, routing, and responsive design best practices.',
+    ],
+  },
+  {
+    degree: 'Higher Secondary Education',
+    institution: 'Namchi Senior Secondary School',
+    date: '2019 - 2021',
+    icon: 'svg',
+    iconType: 'svg',
+    bullets: [
+      'Studied foundational computer science and mathematics.',
+      'Participated in coding competitions and tech clubs.',
+    ],
+  },
+]
+
+/* const testimonials = {
+  name: 'Niten Rai',
+  designation: 'Graphic Designer',
+  company: 'Shangrila Industries Pvt. Ltd.',
+  message: ''
+}
+ */
+export { profile, about, skills, works, social, experiences, education/* testimonials */};

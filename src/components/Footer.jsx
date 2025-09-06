@@ -57,7 +57,7 @@ export default function Footer() {
                     </div>
 
                     <div className="flex justify-center gap-2">
-                        <p className="text-2xl md:text-3xl font-bold">
+                        <p className="text-xl md:text-3xl font-bold">
                             {profile.email}
                         </p>
                         <button
@@ -69,7 +69,7 @@ export default function Footer() {
                             viewBox="0 0 24 24"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                            className="w-7 h-7"
+                            className="w-7 h-7 cursor-pointer"
                             >
                             <path
                                 d="M9 15H5C3.89543 15 3 14.1046 3 13V5C3 3.89543 3.89543 3 5 3H13C14.1046 3 15 3.89543 15 5V9M11 21H19C20.1046 21 21 20.1046 21 19V11C21 9.89543 20.1046 9 19 9H11C9.89543 9 9 9.89543 9 11V19C9 20.1046 9.89543 21 11 21Z"
@@ -95,7 +95,7 @@ export default function Footer() {
                             href={link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-8 h-8 flex justify-center items-center"
+                            className="w-8 h-8 flex justify-center items-center text-[var(--color-primary)]"
                             aria-label={name}
                             >
                             {iconMap[name]}
