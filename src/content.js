@@ -147,8 +147,8 @@ const experiences = [
     bullets: [],
   },
   {
-    title: 'Freelance Developer',
-    date: 'July 2025 - Present',
+    title: 'Web Developer Intern',
+    date: 'January - July 2025',
     description: '',
     icon: 'images/depts/nic.png',
     iconType: 'img',
