@@ -12,23 +12,43 @@ export default function About() {
 
                     <div className="space-y-8">
                         <div className="space-y-2">
-                            <p className="block text-base md:text-lg font-semibold">I am a front-end developer based in Sikkim. Has Computer Science & Engineering background. </p>
+                            <p className="block text-base/tight md:text-lg/tight font-semibold">I am a front-end developer based in Sikkim. Has Computer Science & Engineering background. </p>
                             <p className="mt-1 text-sm">
                                 {about.description}
                             </p>
                         </div>
 
                         <div className="flex gap-2 items-center">
-                            <a className="py-2.5 px-5 inline-flex justify-center items-center gap-4 text-sm font-bold rounded-full bg-[var(--color-primary)] text-black" href={profile.resume} target="_blank" rel="noopener noreferrer">
-                                <p>DOWNLOAD RESUME</p>
-                                <div className="bg-black h-1.5 w-1.5 rounded-full"></div>
+
+                            <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={profile.resume}
+                            className="cursor-pointer flex justify-between bg-[var(--color-primary)] px-3 py-2 rounded-full text-neutral-800 tracking-wider shadow-xl hover:bg-neutral-800 hover:text-[var(--color-primary)] hover:scale-105 duration-500 heading-text text-xl w-[150px]"
+                            >
+                                Resume
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="2"
+                                    stroke="currentColor"
+                                    className="size-5 animate-bounce"
+                                >
+                                    <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+                                    ></path>
+                                </svg>
                             </a>
 
                             <a
-                            className="p-3 rounded-full bg-neutral-800 text-[var(--color-primary)]"
+                            className="p-3 rounded-full bg-neutral-800 text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-black hover:scale-105 duration-500"
                             href={social[1].link}
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="LinkedIn profile"
                             >
                                 <svg
                                     viewBox="0 0 512 512"
@@ -50,10 +70,11 @@ export default function About() {
                             </a>
 
                             <a
-                                className="p-3 rounded-full bg-neutral-800 text-[var(--color-primary)]"
+                                className="p-3 rounded-full bg-neutral-800 text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-black hover:scale-105 duration-500"
                                 href={social[0].link}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="Github profile"
                                 >
                                 <svg 
                                     viewBox="0 0 20 20" 
@@ -74,7 +95,7 @@ export default function About() {
                 </div>
                 
                 <div className="max-w-6xl w-full mx-auto px-4 mt-8">
-                    <img className="w-full rounded-md" src="images/avatar-wide.png" alt="Hero Image" />
+                    <img className="w-full rounded-md" src="images/avatar-wide.avif" alt="Tushar Rai" />
                 </div>
             </section>
 
@@ -133,35 +154,35 @@ export default function About() {
                 <div className="grid md:grid-cols-2 gap-8 md:gap-8 lg:gap-20 md:items-start max-w-6xl w-full mx-auto px-4">
                     <h1 className="block text-3xl font-semibold sm:text-4xl lg:text-6xl lg:leading-tight text-primary heading-text">My Education</h1>
 
-<div>
-  {education.map((edu, index) => (
-    <div key={index} className="group relative flex gap-x-5">
-      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-gray-200">
-        <div className="relative z-10 size-8 flex justify-center items-center">
-          {edu.iconType === 'svg' ? (
-            <svg className="shrink-0 size-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 12h.01" />
-              <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-              <path d="M22 13a18.15 18.15 0 0 1-20 0" />
-              <rect width="20" height="14" x="2" y="6" rx="2" />
-            </svg>
-          ) : (
-            <img src={edu.icon} alt={edu.institution} />
-          )}
-        </div>
-      </div>
+                    <div>
+                    {education.map((edu, index) => (
+                        <div key={index} className="group relative flex gap-x-5">
+                        <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-gray-200">
+                            <div className="relative z-10 size-8 flex justify-center items-center">
+                            {edu.iconType === 'svg' ? (
+                                <svg className="shrink-0 size-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M12 12h.01" />
+                                <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                                <path d="M22 13a18.15 18.15 0 0 1-20 0" />
+                                <rect width="20" height="14" x="2" y="6" rx="2" />
+                                </svg>
+                            ) : (
+                                <img src={edu.icon} alt={edu.institution} />
+                            )}
+                            </div>
+                        </div>
 
-      <div className="grow pb-8 group-last:pb-0">
-        <div className="flex justify-between flex-col md:flex-row mb-1 text-sm">
-          <p className="font-semibold text-base">{edu.degree}</p>
-          <p className="mb-1 text-sm">{edu.date}</p>
-        </div>
+                        <div className="grow pb-8 group-last:pb-0">
+                            <div className="flex justify-between flex-col md:flex-row mb-1 text-sm">
+                            <p className="font-semibold text-base">{edu.degree}</p>
+                            <p className="mb-1 text-sm">{edu.date}</p>
+                            </div>
 
-        <p className="mb-1 text-sm text-[var(--color-primary)] font-medium">{edu.institution}</p>
-      </div>
-    </div>
-  ))}
-</div>
+                            <p className="mb-1 text-sm text-[var(--color-primary)] font-medium">{edu.institution}</p>
+                        </div>
+                        </div>
+                    ))}
+                    </div>
 
                 </div>
             </section>

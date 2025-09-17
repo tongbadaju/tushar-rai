@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Works from './pages/Works';
 import About from './pages/About';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         </main>
 
         <Footer/>
+        <ScrollToTopButton />
       </div>
     </Router>
 

@@ -43,44 +43,45 @@ export default function Footer() {
         navigator.clipboard.writeText(profile.email);
     };
 
-    
     return (
         <footer>
             <section className="flex justify-center py-18">
-                <div className="text-center space-y-9 max-w-6xl w-full mx-auto px-4">
+                <div id="contact" className="text-center space-y-9 max-w-6xl w-full mx-auto px-4">
                     <div className="space-y-4">
-                        <h2 className="bg-gray-200/80 text-gray-600 inline-block rounded-2xl py-0.5 px-3 text-sm font-medium">Get in touch</h2>
+                        <h2 className="bg-gray-200 text-gray-600 inline-block rounded-2xl py-0.5 px-3 text-sm font-medium">Get in touch</h2>
                         <p className="text-sm md:text-base">
                             What's next? Feel free to reach out to me if you're looking for<br className="hidden md:block" />
                             a developer, have a query, or simply want to connect.
                         </p>
                     </div>
 
-                    <div className="flex justify-center gap-2">
+                    <div className="flex justify-center gap-3">
                         <p className="text-xl md:text-3xl font-bold">
                             {profile.email}
                         </p>
-                        <button
-                        onClick={handleCopy}
-                        className="p-1 rounded hover:text-gray-400 transition"
-                        aria-label="Copy email"
-                        >
-                            <svg
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="w-7 h-7 cursor-pointer"
-                            >
-                            <path
-                                d="M9 15H5C3.89543 15 3 14.1046 3 13V5C3 3.89543 3.89543 3 5 3H13C14.1046 3 15 3.89543 15 5V9M11 21H19C20.1046 21 21 20.1046 21 19V11C21 9.89543 20.1046 9 19 9H11C9.89543 9 9 9.89543 9 11V19C9 20.1046 9.89543 21 11 21Z"
+
+                        <div className="group relative">
+                            <button onClick={handleCopy} aria-label="Copy Email">
+                                <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="w-6 md:w-8 hover:scale-125 duration-200 hover:text-[var(--color-primary)] active:scale-90 cursor-pointer"
+                                fill="none"
+                                viewBox="0 0 24 24"
                                 stroke="currentColor"
                                 strokeWidth="2"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
-                            />
-                            </svg>
-                        </button>
-                        
+                                >
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                            <span
+                                className="absolute -top-10 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 px-3 rounded-lg bg-white text-black py-1 text-sm font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-100"
+                            >
+                                Copy
+                            </span>
+                        </div>  
                     </div>
 
                     <div className="text-gray-400">
@@ -95,7 +96,7 @@ export default function Footer() {
                             href={link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-8 h-8 flex justify-center items-center text-[var(--color-primary)]"
+                            className="w-8 h-8 flex justify-center items-center text-[var(--color-primary)] hover:scale-130 duration-400"
                             aria-label={name}
                             >
                             {iconMap[name]}

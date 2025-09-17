@@ -8,7 +8,18 @@ export default function Header() {
     { label: 'Home', path: '/' },
     { label: 'About', path: '/about' },
     { label: 'Works', path: '/works' },
+    { label: 'Contact', path: '#contact' }
   ];
+
+  // Scroll to the bottom of the page.
+  const handleScrollToFooter = (e) => {
+    e.preventDefault(); 
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth',
+    });
+    setIsMenuOpen(false); // Close the mobile menu after clicking.
+  };
 
   return (
     <header className="flex flex-wrap md:flex-nowrap z-50 w-full">
@@ -40,22 +51,44 @@ export default function Header() {
           </div>
         </div>
 
-        <div className={`basis-full grow md:block overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[75vh]' : 'max-h-0'} md:max-h-full`}>
+        <div className={`basis-full grow md:block overflow-hidden transition-all duration-400 ease-in-out ${isMenuOpen ? 'max-h-[75vh]' : 'max-h-0'} md:max-h-full`}>
           <div className="overflow-y-auto max-h-[75vh] mt-2 md:mt-0">
             <div className="py-2 md:py-0 font-light text-sm flex flex-col md:flex-row md:items-center gap-2 md:gap-3">
               <div className="grow">
                 <div className="flex flex-col md:flex-row md:justify-end md:items-center">
-                  {navItems.map(({ label, path }) => (
-                    <NavLink
-                      key={label}
-                      to={path}
-                      className={({ isActive }) =>
-                        `p-2 flex items-center rounded-lg ${isActive ? 'text-[var(--color-primary)]' : 'text-white hover:text-[var(--color-primary)]'}`
-                      }
-                    >
-                      {label}
-                    </NavLink>
-                  ))}
+                  {navItems.map(({ label, path }) => {
+                    // Check if the path is a scroll link (starts with '#').
+                    if (path.startsWith('#')) {
+                      return (
+                        <a
+                          key={label}
+                          href={path}
+                          onClick={handleScrollToFooter}
+                          // Manually applying styles similar to NavLink for consistency.
+                          className="p-2 flex items-center rounded-lg text-white hover:text-[var(--color-primary)]"
+                        >
+                          {label}
+                        </a>
+                      );
+                    }
+                    // Render a standard NavLink for regular routes.
+                    return (
+                      <NavLink
+                        key={label}
+                        to={path}
+                        onClick={() => setIsMenuOpen(false)}
+                        className={({ isActive }) =>
+                          `p-2 flex items-center rounded-lg ${
+                            isActive
+                              ? 'text-[var(--color-primary)] md:text-xl'
+                              : 'text-white hover:text-[var(--color-primary)]'
+                          }`
+                        }
+                      >
+                        {label}
+                      </NavLink>
+                    );
+                  })}
                 </div>
               </div>
 

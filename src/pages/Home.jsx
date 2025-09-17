@@ -1,7 +1,12 @@
 import React from 'react'
 import { skills, works, profile, social, about, /* testimonials */ } from '../content'
+import { NavLink } from 'react-router-dom';
+import ProjectCard from '../components/ProjectCard';
 
 export default function Home() {
+
+    const projectsToShow = works.slice(0, 3);
+
     return(
 
         <div>
@@ -14,19 +19,39 @@ export default function Home() {
                             <p className="mt-1 text-sm md:text-base">
                                 {about.shortDescription}
                             </p>
-                        </div>
+                        </div> 
 
                         <div className="flex gap-2 items-center">
-                            <a className="py-2.5 px-5 inline-flex justify-center items-center gap-4 text-sm font-bold rounded-full bg-[var(--color-primary)] text-black" href={profile.resume} target="_blank" rel="noopener noreferrer">
-                                <p>RESUME</p>
-                                <div className="bg-black h-1.5 w-1.5 rounded-full"></div>
+
+                            <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={profile.resume}
+                            className="cursor-pointer flex justify-between bg-[var(--color-primary)] px-3 py-2 rounded-full text-neutral-800 tracking-wider shadow-xl hover:bg-neutral-800 hover:text-[var(--color-primary)] hover:scale-105 duration-500 heading-text text-xl w-[150px]"
+                            >
+                                Resume
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="2"
+                                    stroke="currentColor"
+                                    className="size-5 animate-bounce"
+                                >
+                                    <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+                                    ></path>
+                                </svg>
                             </a>
 
                             <a
-                            className="p-3 rounded-full bg-neutral-800 text-[var(--color-primary)]"
+                            className="p-3 rounded-full bg-neutral-800 text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-black hover:scale-105 duration-500"
                             href={social[1].link}
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="LinkedIn profile"
                             >
                                 <svg
                                     viewBox="0 0 512 512"
@@ -48,10 +73,11 @@ export default function Home() {
                             </a>
 
                             <a
-                                className="p-3 rounded-full bg-neutral-800 text-[var(--color-primary)]"
+                                className="p-3 rounded-full bg-neutral-800 text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-black hover:scale-105 duration-500"
                                 href={social[0].link}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="GitHub profile"
                                 >
                                 <svg 
                                     viewBox="0 0 20 20" 
@@ -72,7 +98,7 @@ export default function Home() {
                     
                     {/* Image Col */}
                     <div className="w-full flex md:justify-end">
-                        <img className="max-w-sm w-full rounded-md" src={profile.avatar} alt="Hero Image" />
+                        <img width="400" height="400" className="max-w-sm w-full rounded-md" src="images/avatar.avif" alt="Tushar Rai" fetchpriority="high"/>
                     </div>
                 
                 </div>
@@ -84,7 +110,7 @@ export default function Home() {
                 <div className="md:items-center max-w-6xl w-full mx-auto px-4">
 
                     <div className="text-center mb-10 space-y-3">
-                        <h2 className="bg-gray-200/80 text-gray-600 inline-block rounded-2xl py-0.5 px-3 text-sm font-medium">Skills</h2>
+                        <h2 className="bg-gray-200 text-gray-600 inline-block rounded-2xl py-0.5 px-3 text-sm font-medium">Skills</h2>
                         <p className="text-base">
                             The skills, tools and technologies I am good at.
                         </p>
@@ -102,7 +128,7 @@ export default function Home() {
                             <div className="h-10 w-10 md:w-13 md:h-13 flex items-center justify-center">
                                 <img
                                     src={skill.icon}
-                                    alt={skill.name}
+                                    alt={`${skill.name} logo`}
                                     className="w-12 h-12 object-contain"
                                 />
                             </div>
@@ -120,7 +146,7 @@ export default function Home() {
             <section className="flex justify-center py-9 md:py-18 border-b border-neutral-800">
                 <div className="md:items-center max-w-6xl w-full mx-auto px-4">
                     <div className="text-center mb-10 space-y-3">
-                        <h2 className="bg-gray-200/80 text-gray-600 inline-block rounded-2xl py-0.5 px-3 text-sm font-medium">Work</h2>
+                        <h2 className="bg-gray-200 text-gray-600 inline-block rounded-2xl py-0.5 px-3 text-sm font-medium">Work</h2>
                         <p className="text-base">
                             Here are some of the selected projects that<br/>
                             showcase my passion for front-end development.
@@ -128,104 +154,30 @@ export default function Home() {
                     </div>
 
                     <div className="grid gap-12">
-                        {works.map((work, index) => (
-                        <div key={index} className="grid md:grid-cols-2 gap-8 items-center">
-                            {/* Image */}
-                            <div className="relative w-full max-w-md mx-auto px-5 py-10 bg-neutral-900 rounded-lg">
-                                <img
-                                    src={work.image}
-                                    alt={work.title}
-                                    className="w-full rounded-md shadow-md"
-                                />
-                            </div>
-
-                            {/* Text Content */}
-                            <div className="space-y-5">
-                                <div className="space-y-3">
-                                    <h3 className="text-2xl font-semibold heading-text">{work.title}</h3>
-                                    <p className="text-sm/normal font-light">{work.description}</p>
-                                </div>
-
-                                <div className="text-sm">
-                                    <div className="font-semibold"> PROJECT INFO </div>
-
-                                    <hr className="my-2 text-gray-700"/>
-
-                                    <div className="flex justify-between">
-                                        <p>Year</p>
-                                        <p>{work.year}</p>
-                                    </div>
-                                    
-                                    <hr className="my-2 text-gray-700"/>
-
-                                    <div className="flex justify-between">
-                                        <p>Role</p>
-                                        <p>{work.role}</p>
-                                    </div>
-
-                                    <hr className="my-2 text-gray-700"/>
-
-                                    <div className="flex justify-between">
-                                        <p>Tech Stack</p>
-                                        <p>{work.techStack}</p>
-                                    </div>
-
-                                    <hr className="mt-2 text-gray-700"/>
-                                </div>
-
-                                <div className="flex gap-3 mt-6">
-                                {work.demo && (
-                                    <a
-                                    href={work.demo}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-sm flex gap-1 items-center text-[var(--color-primary)] border-b border-[var(--color-primary)] pb-0.5 font-semibold"
-                                    >
-                                    <p>LIVE DEMO</p>
-                                    <svg className="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M6 18L18 6M18 6H9M18 6V15"></path>
-                                    </svg>
-                                    </a>
-                                )}
-
-                                {work.github && (
-                                    <a
-                                    href={work.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-sm flex gap-1.5 items-center text-[var(--color-primary)] border-b border-[var(--color-primary)] pb-0.5 font-semibold"
-                                    >
-                                        <p>SEE ON GITHUB</p>
-                                        
-                                        <svg 
-                                            viewBox="0 0 20 20" 
-                                            xmlns="http://www.w3.org/2000/svg" 
-                                            fill="currentColor" 
-                                            className="w-4 h-4 shrink-0"
-                                        >
-                                            <g transform="translate(-140.000000, -7559.000000)">
-                                                <g transform="translate(56.000000, 160.000000)">
-                                                    <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]"></path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </a>
-                                )}
-                                </div>
-
-                            </div>
-                        </div>
+                        {projectsToShow.map((work, index) => (
+                            <ProjectCard key={index} work={work} />
                         ))}
                     </div>
 
-                    <div className="mt-20 items-center justify-center flex gap-1 text-lg font-semibold">
-                        
+                    <div className="mt-16 md:mt-20 text-center">
+                        <NavLink to="/works" className="relative inline-flex items-center text-sm font-semibold justify-center px-5 py-2 overflow-hidden text-[var(--color-primary)] transition duration-300 ease-out border-2 border-[var(--color-primary)] rounded-full group cursor-pointer">
+                            <span className="absolute inset-0 flex items-center justify-center w-full h-full text-black duration-300 -translate-x-full bg-[var(--color-primary)] group-hover:translate-x-0 ease-out">
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                            <span className="absolute flex items-center justify-center w-full h-full transition-all duration-300 group-hover:translate-x-full ease-out">
+                                VIEW ALL
+                            </span>
+                            <span className="relative invisible">
+                                VIEW ALL
+                            </span>
+                        </NavLink>
                     </div>
                 </div>
+
             </section>
 
 
-{/*             <section className="flex justify-center py-9 md:py-18 border-b border-neutral-800">
+{/*         <section className="flex justify-center py-9 md:py-18 border-b border-neutral-800">
                 <div className="md:items-center max-w-6xl w-full mx-auto px-4 text-center">
                     <div className="max-w-screen-md mx-auto">
                         <svg className="h-12 mx-auto mb-3" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -244,7 +196,9 @@ export default function Home() {
                     </div>
                 </div>
             </section> */}
+
         </div>
 
     )
 }
+
