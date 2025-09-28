@@ -41,3 +41,9 @@ yarn dev
 ```
 
 The application will now be running on http://localhost:5173 (or similar).
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the See the [LICENSE](LICENSE) file for details.
