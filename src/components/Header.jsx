@@ -80,7 +80,7 @@ export default function Header() {
                         className={({ isActive }) =>
                           `p-2 flex items-center rounded-lg ${
                             isActive
-                              ? 'text-[var(--color-primary)] md:text-xl'
+                              ? 'text-[var(--color-primary)]'
                               : 'text-white hover:text-[var(--color-primary)]'
                           }`
                         }
