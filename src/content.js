@@ -110,7 +110,6 @@ const works = [
     year: 2025,
     role: 'Full-Stack Developer',
     image: 'images/works/kotha.avif',
-    github: 'https://github.com/tongbadaju/kotha',
     techStack: 'Angular, TailwindCSS, Django, DRF, PostgreSQL'
   },
   {
