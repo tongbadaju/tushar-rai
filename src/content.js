@@ -104,12 +104,12 @@ const skills = [
 
 const works = [
   {
-    title: 'Kotha Property Platform',
+    title: 'Propotee',
     description:
       'Independently designed and developed a scalable full-stack rental platform with a modular frontend and secure backend. Designed responsive, accessible UIs and developed dynamic property listings with role-based dashboards. API-driven lease workflows streamlined operations and improved the user experience across devices.',
     year: 2025,
     role: 'Full-Stack Developer',
-    image: 'images/works/kotha.avif',
+    image: 'images/works/propotee.avif',
     techStack: 'Angular, TailwindCSS, Django, DRF, PostgreSQL'
   },
   {
