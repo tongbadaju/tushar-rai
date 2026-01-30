@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show button when page is scrolled down
   const toggleVisibility = () => {
     if (window.scrollY > 300) {
       setIsVisible(true);
@@ -28,20 +27,25 @@ export default function ScrollToTopButton() {
   }, []);
 
   return (
-    <div className="fixed bottom-5 right-5 z-50">
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="cursor-pointer relative after:content-['scroll_to_top'] after:text-white after:absolute after:text-nowrap after:scale-0 hover:after:scale-100 after:duration-200 w-12 h-12 md:w-15 md:h-15 rounded-full border-4 border-[var(--color-primary)] bg-black flex items-center justify-center duration-300 hover:rounded-[50px] hover:w-36 group/button overflow-hidden active:scale-90"
+    <div className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
+      <button
+        onClick={scrollToTop}
+        className="w-12 h-12 rounded-full bg-[var(--bg-card)] border border-[var(--color-primary)]/30 hover:border-[var(--color-primary)] hover:glow-primary-sm flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 group"
+        aria-label="Scroll to top"
+      >
+        <svg
+          className="w-5 h-5 text-[var(--color-primary)] transition-transform duration-300 group-hover:-translate-y-0.5"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
-          <svg
-            className="w-3 fill-white delay-50 duration-200 group-hover/button:-translate-y-12"
-            viewBox="0 0 384 512"
-          >
-            <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
-          </svg>
-        </button>
-      )}
+          <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+      </button>
     </div>
   );
 }

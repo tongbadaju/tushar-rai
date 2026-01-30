@@ -7,31 +7,28 @@ import Home from './pages/Home';
 import Works from './pages/Works';
 import About from './pages/About';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 
   return (
-    // Router to enable client-side navigation
-    <Router>  
+    <Router>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col">
-
         <Header/>
         
-        <main className="max-width">
-  
+        <main className="flex-1">
           <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/works" element={<Works />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/works" element={<Works />} />
           </Routes>
-       
         </main>
 
         <Footer/>
         <ScrollToTopButton />
       </div>
     </Router>
-
   )
 }
 

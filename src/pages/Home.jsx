@@ -1,5 +1,5 @@
 import React from 'react'
-import { skills, works, profile, social, about, /* testimonials */ } from '../content'
+import { skills, works, profile, social, about } from '../content'
 import { NavLink } from 'react-router-dom';
 import ProjectCard from '../components/ProjectCard';
 
@@ -8,82 +8,84 @@ export default function Home() {
     const projectsToShow = works.slice(0, 3);
 
     return(
-
-        <div>
-            {/* Introduction Col */}
-            <section className="flex justify-center py-9 md:py-18 border-b border-neutral-800">
-                <div className="grid md:grid-cols-2 gap-8 md:gap-8 lg:gap-20 md:items-center max-w-6xl w-full mx-auto px-4">
-                    <div className="space-y-8">
-                        <div>
-                            <h1 className="block text-3xl font-semibold sm:text-4xl lg:text-6xl lg:leading-xs heading-text">Hi, I am <br/> {profile.name}.</h1>
-                            <p className="mt-1 text-sm md:text-base">
+        <div className="pt-16">
+            {/* Hero Section */}
+            <section className="min-h-[85vh] flex items-center py-16 md:py-24">
+                <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center max-w-6xl w-full mx-auto px-4">
+                    <div className="space-y-8 animate-fade-in-up">
+                        <div className="space-y-4">
+                            <p className="section-title">Front-End Developer</p>
+                            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-semibold heading-text leading-tight">
+                                Hi, I'm <br/>
+                                <span className="text-gradient-primary">{profile.name}</span>.
+                            </h1>
+                            <p className="text-[var(--text-secondary)] text-base md:text-lg max-w-md">
                                 {about.shortDescription}
                             </p>
                         </div> 
 
-                        <div className="flex gap-2 items-center">
-
+                        <div className="flex gap-3 items-center">
                             <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={profile.resume}
-                            className="cursor-pointer flex justify-between bg-[var(--color-primary)] px-3 py-2 rounded-full text-neutral-800 tracking-wider shadow-xl hover:bg-neutral-800 hover:text-[var(--color-primary)] hover:scale-105 duration-500 heading-text text-xl w-[150px]"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={profile.resume}
+                                className="inline-flex items-center gap-2 bg-[var(--color-primary)] px-5 py-3 rounded-full text-black font-semibold text-sm hover:glow-primary hover:scale-105 transition-all duration-300"
                             >
-                                Resume
+                                <span>Resume</span>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     strokeWidth="2"
                                     stroke="currentColor"
-                                    className="size-5 animate-bounce"
+                                    className="size-4"
                                 >
                                     <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
-                                    ></path>
-                                </svg>
-                            </a>
-
-                            <a
-                            className="p-3 rounded-full bg-neutral-800 text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-black hover:scale-105 duration-500"
-                            href={social[1].link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="LinkedIn profile"
-                            >
-                                <svg
-                                    viewBox="0 0 512 512"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="currentColor"
-                                    className="w-5 h-5 shrink-0"
-                                >
-                                    <path
-                                    fillRule="evenodd"
-                                    clipRule="evenodd"
-                                    d="M116.504,500.219V170.654H6.975v329.564H116.504L116.504,500.219z
-                                        M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941
-                                        C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z
-                                        M177.124,500.219c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533
-                                        c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531
-                                        c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
                                     />
                                 </svg>
                             </a>
 
                             <a
-                                className="p-3 rounded-full bg-neutral-800 text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-black hover:scale-105 duration-500"
+                                className="w-11 h-11 rounded-full bg-[var(--bg-card)] border border-white/10 flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)]/30 transition-all duration-300"
+                                href={social[1].link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn profile"
+                            >
+                                <svg
+                                    viewBox="0 0 512 512"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor"
+                                    className="w-5 h-5"
+                                >
+                                    <path
+                                        fillRule="evenodd"
+                                        clipRule="evenodd"
+                                        d="M116.504,500.219V170.654H6.975v329.564H116.504L116.504,500.219z
+                                            M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941
+                                            C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z
+                                            M177.124,500.219c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533
+                                            c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531
+                                            c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z"
+                                    />
+                                </svg>
+                            </a>
+
+                            <a
+                                className="w-11 h-11 rounded-full bg-[var(--bg-card)] border border-white/10 flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)]/30 transition-all duration-300"
                                 href={social[0].link}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="GitHub profile"
-                                >
+                            >
                                 <svg 
                                     viewBox="0 0 20 20" 
                                     xmlns="http://www.w3.org/2000/svg" 
                                     fill="currentColor" 
-                                    className="w-5 h-5 shrink-0"
+                                    className="w-5 h-5"
                                 >
                                     <g transform="translate(-140.000000, -7559.000000)">
                                         <g transform="translate(56.000000, 160.000000)">
@@ -96,43 +98,58 @@ export default function Home() {
 
                     </div>
                     
-                    {/* Image Col */}
-                    <div className="w-full flex md:justify-end">
-                        <img width="400" height="400" className="max-w-sm w-full rounded-md" src="images/avatar.avif" alt="Tushar Rai" fetchpriority="high"/>
+                    {/* Image */}
+                    <div className="w-full flex md:justify-end animate-fade-in-up animation-delay-200">
+                        <div className="relative">
+                            <div className="absolute -inset-1 bg-gradient-to-br from-[var(--color-primary)]/20 via-transparent to-transparent rounded-2xl blur-xl opacity-50" />
+                            <img 
+                                width="400" 
+                                height="400" 
+                                className="relative max-w-sm w-full rounded-2xl shadow-2xl" 
+                                src="images/avatar.avif" 
+                                alt="Tushar Rai" 
+                                fetchpriority="high"
+                            />
+                        </div>
                     </div>
                 
                 </div>
             </section>
 
+            {/* Gradient separator */}
+            <div className="gradient-separator" />
 
-            {/* Skills */}
-            <section className="flex justify-center py-9 md:py-18 border-b border-neutral-800">
-                <div className="md:items-center max-w-6xl w-full mx-auto px-4">
+            {/* Skills Section */}
+            <section className="py-20 md:py-28">
+                <div className="max-w-6xl w-full mx-auto px-4">
 
-                    <div className="text-center mb-10 space-y-3">
-                        <h2 className="bg-gray-200 text-gray-600 inline-block rounded-2xl py-0.5 px-3 text-sm font-medium">Skills</h2>
-                        <p className="text-base">
-                            The skills, tools and technologies I am good at.
+                    <div className="text-center mb-14 space-y-4">
+                        <p className="section-title">Skills</p>
+                        <h2 className="text-2xl md:text-3xl font-semibold heading-text">
+                            Technologies I Work With
+                        </h2>
+                        <p className="text-[var(--text-secondary)] text-sm md:text-base max-w-md mx-auto">
+                            The skills, tools and technologies I am proficient in.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-4">
+                    <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-6 md:gap-8">
                         {skills.map((skill, index) => (
                         <a
                             key={index}
                             href={skill.site || "#"}
                             target={skill.site ? "_blank" : "_self"}
                             rel="noopener noreferrer"
-                            className="flex flex-col items-center group hover:scale-110 transition-transform duration-300"
+                            className="group flex flex-col items-center gap-3"
                         >
-                            <div className="h-10 w-10 md:w-13 md:h-13 flex items-center justify-center">
+                            <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-xl bg-[var(--bg-card)] border border-white/5 group-hover:border-[var(--color-primary)]/30 group-hover:bg-[var(--bg-card-hover)] transition-all duration-300 group-hover:scale-110">
                                 <img
                                     src={skill.icon}
                                     alt={`${skill.name} logo`}
-                                    className="w-12 h-12 object-contain"
+                                    className="w-8 h-8 md:w-10 md:h-10 object-contain"
                                 />
                             </div>
-                            <p className="text-sm mt-2 capitalize">
+                            <p className="text-xs text-[var(--text-muted)] capitalize group-hover:text-[var(--text-secondary)] transition-colors">
                                 {skill.name}
                             </p>
                         </a>
@@ -141,64 +158,47 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* Gradient separator */}
+            <div className="gradient-separator" />
 
-            {/* Projects */}
-            <section className="flex justify-center py-9 md:py-18 border-b border-neutral-800">
-                <div className="md:items-center max-w-6xl w-full mx-auto px-4">
-                    <div className="text-center mb-10 space-y-3">
-                        <h2 className="bg-gray-200 text-gray-600 inline-block rounded-2xl py-0.5 px-3 text-sm font-medium">Work</h2>
-                        <p className="text-base">
-                            Here are some of the selected projects that<br/>
-                            showcase my passion for front-end development.
+            {/* Projects Section */}
+            <section className="py-20 md:py-28">
+                <div className="max-w-6xl w-full mx-auto px-4">
+                    <div className="text-center mb-14 space-y-4">
+                        <p className="section-title">Featured Work</p>
+                        <h2 className="text-2xl md:text-3xl font-semibold heading-text">
+                            Selected Projects
+                        </h2>
+                        <p className="text-[var(--text-secondary)] text-sm md:text-base max-w-md mx-auto">
+                            Here are some projects that showcase my passion for building great digital experiences.
                         </p>
                     </div>
 
-                    <div className="grid gap-12">
+                    <div className="space-y-20 md:space-y-28">
                         {projectsToShow.map((work, index) => (
-                            <ProjectCard key={index} work={work} />
+                            <ProjectCard key={index} work={work} reverse={index % 2 === 1} />
                         ))}
                     </div>
 
                     <div className="mt-16 md:mt-20 text-center">
-                        <NavLink to="/works" className="relative inline-flex items-center text-sm font-semibold justify-center px-5 py-2 overflow-hidden text-[var(--color-primary)] transition duration-300 ease-out border-2 border-[var(--color-primary)] rounded-full group cursor-pointer">
-                            <span className="absolute inset-0 flex items-center justify-center w-full h-full text-black duration-300 -translate-x-full bg-[var(--color-primary)] group-hover:translate-x-0 ease-out">
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </span>
-                            <span className="absolute flex items-center justify-center w-full h-full transition-all duration-300 group-hover:translate-x-full ease-out">
-                                VIEW ALL
-                            </span>
-                            <span className="relative invisible">
-                                VIEW ALL
-                            </span>
+                        <NavLink 
+                            to="/works" 
+                            className="group inline-flex items-center gap-2 text-sm font-semibold px-6 py-3 rounded-full border border-[var(--color-primary)]/30 text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-black transition-all duration-300"
+                        >
+                            <span>View All Projects</span>
+                            <svg 
+                                className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                viewBox="0 0 24 24"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
                         </NavLink>
                     </div>
                 </div>
 
             </section>
-
-
-{/*         <section className="flex justify-center py-9 md:py-18 border-b border-neutral-800">
-                <div className="md:items-center max-w-6xl w-full mx-auto px-4 text-center">
-                    <div className="max-w-screen-md mx-auto">
-                        <svg className="h-12 mx-auto mb-3" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"/>
-                        </svg> 
-                        <blockquote>
-                            <p className="text-lg md:text-2xl font-medium">"{testimonials.message}"</p>
-                        </blockquote>   
-                        <figcaption className="flex items-center justify-center mt-6 space-x-3">
-                            <img className="w-6 h-6 rounded-full" src="https://niten-design.vercel.app/avatar.png" alt="profile picture"/>
-                            <div className="flex items-center divide-x-2 divide-gray-500">
-                                <div className="pr-3 font-medium text-sm md:text-base">{testimonials.name}</div>
-                                <div className="pl-3 text-sm font-light text-gray-200">{testimonials.designation} at {testimonials.company}</div>
-                            </div>
-                        </figcaption>
-                    </div>
-                </div>
-            </section> */}
-
         </div>
-
     )
 }
-

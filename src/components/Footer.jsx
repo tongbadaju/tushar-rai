@@ -7,7 +7,7 @@ const iconMap = {
         viewBox="0 0 20 20" 
         xmlns="http://www.w3.org/2000/svg" 
         fill="currentColor" 
-        className="w-4.5 h-4.5 shrink-0"
+        className="w-5 h-5"
     >
         <g transform="translate(-140.000000, -7559.000000)">
             <g transform="translate(56.000000, 160.000000)">
@@ -17,8 +17,7 @@ const iconMap = {
     </svg>
   ),
   LinkedIn: (
-    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"className="w-4.5 h-4.5 shrink-0"
-    >
+    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5">
         <path
         d="M116.504,500.219V170.654H6.975v329.564H116.504L116.504,500.219z
             M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941
@@ -30,7 +29,7 @@ const iconMap = {
     </svg>
 ),
   Instagram: (
-    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5.5 h-5.5 shrink-0">
+    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5">
         <path 
         d="M12.7 10c0-1.5-1.2-2.7-2.7-2.7S7.3 8.5 7.3 10s1.2 2.7 2.7 2.7c1.5 0 2.7-1.2 2.7-2.7zm1.4 0c0 2.3-1.8 4.1-4.1 4.1S5.9 12.3 5.9 10 7.7 5.9 10 5.9s4.1 1.8 4.1 4.1zm1.1-4.3c0 .6-.4 1-1 1s-1-.4-1-1 .4-1 1-1 1 .5 1 1zM10 3.4c-1.2 0-3.7-.1-4.7.3-.7.3-1.3.9-1.5 1.6-.4 1-.3 3.5-.3 4.7s-.1 3.7.3 4.7c.2.7.8 1.3 1.5 1.5 1 .4 3.6.3 4.7.3s3.7.1 4.7-.3c.7-.3 1.2-.8 1.5-1.5.4-1.1.3-3.6.3-4.7s.1-3.7-.3-4.7c-.2-.7-.8-1.3-1.5-1.5-1-.5-3.5-.4-4.7-.4zm8 6.6v3.3c0 1.2-.4 2.4-1.3 3.4-.9.9-2.1 1.3-3.4 1.3H6.7c-1.2 0-2.4-.4-3.4-1.3-.8-.9-1.3-2.1-1.3-3.4V10 6.7c0-1.3.5-2.5 1.3-3.4C4.3 2.5 5.5 2 6.7 2h6.6c1.2 0 2.4.4 3.4 1.3.8.9 1.3 2.1 1.3 3.4V10z"
         /> 
@@ -44,71 +43,90 @@ export default function Footer() {
     };
 
     return (
-        <footer>
-            <section className="flex justify-center py-18">
-                <div id="contact" className="text-center space-y-9 max-w-6xl w-full mx-auto px-4">
-                    <div className="space-y-4">
-                        <h2 className="bg-gray-200 text-gray-600 inline-block rounded-2xl py-0.5 px-3 text-sm font-medium">Get in touch</h2>
-                        <p className="text-sm md:text-base">
-                            What's next? Feel free to reach out to me if you're looking for<br className="hidden md:block" />
-                            a developer, have a query, or simply want to connect.
-                        </p>
-                    </div>
+        <footer className="relative">
+            {/* Gradient separator */}
+            <div className="gradient-separator" />
+            
+            <section className="py-20 lg:py-28">
+                <div id="contact" className="max-w-4xl w-full mx-auto px-4 text-center">
+                    {/* Section label */}
+                    <p className="section-title mb-4">Get in touch</p>
+                    
+                    {/* Heading */}
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold heading-text mb-6">
+                        Let's work together
+                    </h2>
+                    
+                    {/* Description */}
+                    <p className="text-[var(--text-secondary)] text-sm md:text-base max-w-lg mx-auto mb-10">
+                        Feel free to reach out if you're looking for a developer, have a query, or simply want to connect.
+                    </p>
 
-                    <div className="flex justify-center gap-3">
-                        <p className="text-xl md:text-3xl font-bold">
+                    {/* Email with glow */}
+                    <div className="flex justify-center items-center gap-3 mb-10">
+                        <a 
+                            href={`mailto:${profile.email}`}
+                            className="text-xl md:text-2xl lg:text-3xl font-bold hover:text-[var(--color-primary)] transition-colors duration-300"
+                        >
                             {profile.email}
-                        </p>
+                        </a>
 
                         <div className="group relative">
-                            <button onClick={handleCopy} aria-label="Copy Email">
+                            <button 
+                                onClick={handleCopy} 
+                                aria-label="Copy Email"
+                                className="p-2 rounded-lg hover:bg-white/5 active:scale-90 transition-all duration-200"
+                            >
                                 <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="w-6 md:w-8 hover:scale-125 duration-200 hover:text-[var(--color-primary)] active:scale-90 cursor-pointer"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="w-5 h-5 md:w-6 md:h-6 text-[var(--text-muted)] hover:text-[var(--color-primary)] transition-colors"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                 >
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                                 </svg>
                             </button>
-                            <span
-                                className="absolute -top-10 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 px-3 rounded-lg bg-white text-black py-1 text-sm font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-100"
-                            >
-                                Copy
+                            <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-lg bg-white text-black text-xs font-medium shadow-lg opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none whitespace-nowrap">
+                                Copy email
                             </span>
                         </div>  
                     </div>
 
-                    <div className="text-gray-400">
-                        <p className="text-sm">
-                            You may also find me on these platforms!
+                    {/* Social links */}
+                    <div className="space-y-3">
+                        <p className="text-[var(--text-muted)] text-sm">
+                            Or find me on
                         </p>
                     
-                        <div className="mt-2 flex justify-center gap-1">
-                        {social.map(({ name, link }, idx) => (
-                            <a
-                            key={idx}
-                            href={link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-8 h-8 flex justify-center items-center text-[var(--color-primary)] hover:scale-130 duration-400"
-                            aria-label={name}
-                            >
-                            {iconMap[name]}
-                            </a>
-                        ))}
+                        <div className="flex justify-center gap-2">
+                            {social.map(({ name, link }, idx) => (
+                                <a
+                                    key={idx}
+                                    href={link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-11 h-11 flex justify-center items-center rounded-full text-[var(--text-muted)] hover:text-[var(--color-primary)] hover:bg-[var(--color-primary)]/10 transition-all duration-300"
+                                    aria-label={name}
+                                >
+                                    {iconMap[name]}
+                                </a>
+                            ))}
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className="flex justify-center py-2 text-sm text-gray-400">
-                <p>© 2025 Tushar Rai</p>
+            {/* Copyright */}
+            <div className="gradient-separator" />
+            <section className="py-6 text-center">
+                <p className="text-xs text-[var(--text-muted)]">
+                    © {new Date().getFullYear()} Tushar Rai. All rights reserved.
+                </p>
             </section>
         </footer>
     )
