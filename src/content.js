@@ -66,11 +66,6 @@ const skills = [
         site: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
     },
     {
-        name: 'javascript',
-        icon: 'icons/javascript.svg',
-        site: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-    },
-    {
         name: 'postgresql',
         icon: 'icons/postgresql.svg',
         site: 'https://www.postgresql.org/',
@@ -99,7 +94,12 @@ const skills = [
         name: 'typescript',
         icon: 'icons/typescript.svg',
         site: 'https://www.typescriptlang.org/',
-    },    
+    },
+    {
+        name: 'django',
+        icon: 'icons/django.svg',
+        site: 'https://www.djangoproject.com/',
+    },
 ]
 
 const works = [
@@ -111,7 +111,7 @@ const works = [
     role: 'Co-Founder & CTO',
     image: 'images/works/propotee.avif',
     demo: 'https://propotee.com',
-    techStack: 'Angular, TailwindCSS, Django, DRF, PostgreSQL'
+    techStack: 'Angular, TailwindCSS, Django, PostgreSQL'
   },
   {
     title: 'Excise Dept Website Revamp',
@@ -120,7 +120,7 @@ const works = [
     year: 2025,
     role: 'Front-End Developer',
     image: 'images/works/excise.avif',
-    techStack: 'Angular, Django, DRF, PostgreSQL'
+    techStack: 'Angular, Django, PostgreSQL'
   },
   {
     title: 'Designer Portfolio',
@@ -152,7 +152,7 @@ const works = [
     role: 'Back-End Developer',
     image: 'images/works/healthhub.avif',
     github: 'https://github.com/tongbadaju/healthhub',
-    techStack: 'Django, Django REST Framework (DRF), PostgreSQL'
+    techStack: 'Django, PostgreSQL'
   },
 ];
 
