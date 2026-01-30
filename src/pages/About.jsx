@@ -128,7 +128,7 @@ export default function About() {
                 {/* Timeline line */}
                 <div className="relative flex flex-col items-center">
                   {/* Glowing dot */}
-                  <div className="relative z-10 w-10 h-10 flex items-center justify-center rounded-full bg-[var(--bg-card)] border border-white/10 group-hover:border-[var(--color-primary)]/50 transition-colors duration-300">
+                  <div className="relative z-10 w-10 h-10 shrink-0 flex items-center justify-center rounded-full overflow-hidden bg-[var(--bg-card)] border border-white/10 group-hover:border-[var(--color-primary)]/50 transition-colors duration-300">
                     {exp.iconType === 'svg' ? (
                       <svg className="w-5 h-5 text-[var(--color-primary)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M12 12h.01" />
@@ -194,7 +194,7 @@ export default function About() {
               <div key={index} className="group relative flex gap-5">
                 {/* Timeline */}
                 <div className="relative flex flex-col items-center">
-                  <div className="relative z-10 w-10 h-10 flex items-center justify-center rounded-full bg-[var(--bg-card)] border border-white/10 group-hover:border-[var(--color-primary)]/50 transition-colors duration-300">
+                  <div className="relative z-10 w-10 h-10 shrink-0 flex items-center justify-center rounded-full overflow-hidden bg-[var(--bg-card)] border border-white/10 group-hover:border-[var(--color-primary)]/50 transition-colors duration-300">
                     {edu.iconType === 'svg' ? (
                       <svg className="w-5 h-5 text-[var(--color-primary)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M22 10v6M2 10l10-5 10 5-10 5z" />

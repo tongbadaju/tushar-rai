@@ -30,7 +30,7 @@ export default function ScrollToTopButton() {
     <div className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
       <button
         onClick={scrollToTop}
-        className="w-12 h-12 rounded-full bg-[var(--bg-card)] border border-[var(--color-primary)]/30 hover:border-[var(--color-primary)] hover:glow-primary-sm flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 group"
+        className="w-12 h-12 cursor-pointer rounded-full bg-[var(--bg-card)] border border-[var(--color-primary)]/30 hover:border-[var(--color-primary)] hover:glow-primary-sm flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 group"
         aria-label="Scroll to top"
       >
         <svg

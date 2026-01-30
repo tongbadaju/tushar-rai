@@ -75,7 +75,7 @@ export default function Footer() {
                             <button 
                                 onClick={handleCopy} 
                                 aria-label="Copy Email"
-                                className="p-2 rounded-lg hover:bg-white/5 active:scale-90 transition-all duration-200"
+                                className="cursor-pointer p-2 rounded-lg hover:bg-white/5 active:scale-90 transition-all duration-200"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"

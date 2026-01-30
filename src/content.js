@@ -10,8 +10,8 @@ const profile = {
 };
 
 const about = {
-  description: "I am a front-end developer based in Namchi looking for exciting opportunities. Has Computer Science and Engineering background. Likes to focus on accessibility when developing. Passionate and curious about solving problems. Currently, I'm exploring Reactjs. While I am not programming, I enjoy going on rides and gym. Learning more to improve skill.",
-  shortDescription: "A Sikkim based front-end developer passionate about building accessible and user friendly websites."
+  description: "I am a developer and entrepreneur based in Sikkim with a Computer Science & Engineering background. Currently, I'm co-founding Propotee, a proptech startup revolutionizing the rental experience. I'm passionate about building accessible, user-friendly products that solve real problems. When I'm not coding, you'll find me riding or at the gym.",
+  shortDescription: "Co-Founder & CTO at Propotee. Building accessible and user-friendly digital experiences."
 };
 
 const social = [
@@ -106,10 +106,11 @@ const works = [
   {
     title: 'Propotee',
     description:
-      'Independently designed and developed a scalable full-stack rental platform with a modular frontend and secure backend. Designed responsive, accessible UIs and developed dynamic property listings with role-based dashboards. API-driven lease workflows streamlined operations and improved the user experience across devices.',
+      'A modern proptech SaaS real estate marketplace that directly connects tenants with property owners, eliminating intermediaries and brokerage fees. We bridge the gap in the market by facilitating direct communication, ensuring a frictionless, transparent, and verified rental experience.',
     year: 2025,
-    role: 'Full-Stack Developer',
+    role: 'Co-Founder & CTO',
     image: 'images/works/propotee.avif',
+    demo: 'https://propotee.com',
     techStack: 'Angular, TailwindCSS, Django, DRF, PostgreSQL'
   },
   {

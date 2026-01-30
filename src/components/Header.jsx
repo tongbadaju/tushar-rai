@@ -39,10 +39,10 @@ export default function Header() {
         {/* Logo */}
         <NavLink 
           to="/" 
-          className="font-semibold text-2xl heading-text tracking-wide hover:text-[var(--color-primary)] transition-colors duration-300"
+          className="hover:opacity-80 transition-opacity duration-300"
           aria-label="Tushar"
         >
-          {"<tr/>"}
+          <img src="/icon-secondary.svg" alt="TR" className="h-6.5 w-6.5" />
         </NavLink>
 
         {/* Desktop Navigation */}
