@@ -41,11 +41,6 @@ const skills = [
         site: 'https://www.c-language.org/',
     },
     {
-        name: 'css',
-        icon: 'icons/css.svg',
-        site: 'https://www.w3.org/Style/CSS/Overview.en.html',
-    },
-    {
         name: 'figma',
         icon: 'icons/figma.svg',
         site: 'https://www.figma.com/',
@@ -59,11 +54,6 @@ const skills = [
         name: 'github',
         icon: 'icons/github.svg',
         site: 'https://github.com/',
-    },
-    {
-        name: 'html',
-        icon: 'icons/html.svg',
-        site: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
     },
     {
         name: 'postgresql',
@@ -100,6 +90,11 @@ const skills = [
         icon: 'icons/django.svg',
         site: 'https://www.djangoproject.com/',
     },
+    {
+        name: 'vite',
+        icon: 'icons/vite.svg',
+        site: 'https://vitejs.dev/',
+    },
 ]
 
 const works = [
@@ -118,7 +113,7 @@ const works = [
     description:
       "Collaborated with a team to revamp the Government of Sikkim's Excise Department website, delivering a scalable full-stack solution. Built secure, role-based dashboards and a responsive, accessible UI. Automated license workflows with API-driven forms and dynamic data handling and improved the overall user experience.",
     year: 2025,
-    role: 'Front-End Developer',
+    role: 'Lead Developer',
     image: 'images/works/excise.avif',
     techStack: 'Angular, Django, PostgreSQL'
   },
@@ -131,7 +126,18 @@ const works = [
     image: 'images/works/niten-design.avif',
     demo: 'https://niten-design.vercel.app',
     github: 'https://github.com/tongbadaju/niten.design',
-    techStack: 'React, TailwindCSS'
+    techStack: 'React, Vite, TailwindCSS'
+  },
+  {
+    title: 'Daju Bhai Motorcycle Club',
+    description:
+      'Developed a community platform for an enthusiast motorcycle club based in Namchi, Sikkim',
+    year: 2026,
+    role: 'Lead Developer',
+    image: 'images/works/dajubhai-mc.avif',
+    demo: 'https://dajubhaimc.vercel.app',
+    github: 'https://github.com/tongbadaju/dajubhai-mc',
+    techStack: 'React, Vite, TailwindCSS'
   },
   {
     title: 'Unfolo',
@@ -142,7 +148,7 @@ const works = [
     image: 'images/works/unfolo.avif',
     demo: 'https://unfolo.vercel.app',
     github: 'https://github.com/tongbadaju/unfolo',
-    techStack: 'React, TailwindCSS'
+    techStack: 'React, Vite, TailwindCSS'
   },
   {
     title: 'Healthhub',
