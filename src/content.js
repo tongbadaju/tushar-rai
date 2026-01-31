@@ -137,7 +137,7 @@ const works = [
     image: 'images/works/dajubhai-mc.avif',
     demo: 'https://dajubhaimc.vercel.app',
     github: 'https://github.com/tongbadaju/dajubhai-mc',
-    techStack: 'React, Vite, TailwindCSS'
+    techStack: 'React, Vite'
   },
   {
     title: 'Unfolo',
