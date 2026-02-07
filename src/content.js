@@ -133,7 +133,7 @@ const works = [
     description:
       'Developed a community platform for an enthusiast motorcycle club based in Namchi, Sikkim',
     year: 2026,
-    role: 'Lead Developer',
+    role: 'Front-End Developer',
     image: 'images/works/dajubhai-mc.avif',
     demo: 'https://dajubhaimc.vercel.app',
     github: 'https://github.com/tongbadaju/dajubhai-mc',

@@ -118,8 +118,13 @@ export default function Header() {
         className={`md:hidden overflow-hidden transition-all duration-400 ease-in-out ${
           isMenuOpen ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'
         }`}
+        style={{
+          backdropFilter: isMenuOpen ? 'blur(12px)' : 'blur(0px)',
+          WebkitBackdropFilter: isMenuOpen ? 'blur(12px)' : 'blur(0px)',
+          transition: 'backdrop-filter 400ms ease-in-out, -webkit-backdrop-filter 400ms ease-in-out'
+        }}
       >
-        <div className="glass-header px-4 py-4 space-y-1 border-t border-white/5">
+        <div className="px-4 py-4 space-y-1 border-t border-white/5 bg-[rgba(10,10,10,0.8)]">
           {navItems.map(({ label, path }) => {
             if (path.startsWith('#')) {
               return (
