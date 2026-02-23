@@ -103,8 +103,8 @@ export default function Home() {
                         <div className="relative">
                             <div className="absolute -inset-1 bg-gradient-to-br from-[var(--color-primary)]/20 via-transparent to-transparent rounded-2xl blur-xl opacity-50" />
                             <img 
-                                width="400" 
-                                height="400" 
+                                width="384" 
+                                height="480" 
                                 className="relative max-w-sm w-full rounded-2xl shadow-2xl" 
                                 src="images/avatar.avif" 
                                 alt="Tushar Rai" 
