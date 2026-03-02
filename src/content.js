@@ -10,8 +10,8 @@ const profile = {
 };
 
 const about = {
-  description: "I am a developer and entrepreneur based in Sikkim with a Computer Science & Engineering background. Currently, I'm co-founding Propotee, a proptech startup revolutionizing the rental experience. I'm passionate about building accessible, user-friendly products that solve real problems. When I'm not coding, you'll find me riding or at the gym.",
-  shortDescription: "Co-Founder & CTO at Propotee. Building accessible and user-friendly digital experiences."
+  description: "I am a developer and entrepreneur based in Sikkim with a Computer Science & Engineering background. Currently, I'm co-founding Propotee, a proptech startup revolutionizing the property marketplace. I'm passionate about building accessible, user-friendly products that solve real problems. When I'm not coding, you'll find me riding or at the gym.",
+  shortDescription: "Co-Founder at Propotee. Building accessible and user-friendly digital experiences."
 };
 
 const social = [
@@ -99,11 +99,11 @@ const skills = [
 
 const works = [
   {
-    title: 'Propotee',
+    title: 'Propotee (Coming Soon)',
     description:
-      'A modern proptech SaaS real estate marketplace that directly connects tenants with property owners, eliminating intermediaries and brokerage fees. We bridge the gap in the market by facilitating direct communication, ensuring a frictionless, transparent, and verified rental experience.',
+      'A modern proptech SaaS real estate marketplace that directly connects tenants with property owners, eliminating intermediaries and brokerage fees. We bridge the gap in the market by facilitating direct communication, ensuring a frictionless, transparent, and verified property marketplace.',
     year: 2025,
-    role: 'Co-Founder & CTO',
+    role: 'Co-Founder',
     image: 'images/works/propotee.avif',
     demo: 'https://propotee.com',
     techStack: 'Angular, TailwindCSS, Django, PostgreSQL'
@@ -163,6 +163,15 @@ const works = [
 ];
 
 const experiences = [
+  {
+    title: 'Co-Founder',
+    date: '2025 - Present',
+    description: 'Co-founding Propotee, a proptech startup revolutionizing the property marketplace. Building accessible and user-friendly digital experiences.',
+    icon: 'images/depts/propotee.png', 
+    iconType: 'img',
+    organization: 'Propotee',
+    bullets: [],
+  },
   {
     title: 'Freelance Developer',
     date: 'July 2025 - Present',
