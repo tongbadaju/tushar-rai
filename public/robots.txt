@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Replace with your actual production domain
+Sitemap: https://tusharrai.com/sitemap.xml

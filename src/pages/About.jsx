@@ -1,9 +1,16 @@
 import React from 'react'
 import { profile, social, about, experiences, education } from '../content'
+import SEO from '../components/SEO';
 
 export default function About() {
   return (
     <div className="pt-16">
+      <SEO 
+        title="About | Tushar Rai" 
+        description={about.shortDescription} 
+        name={profile.name} 
+        type="profile" 
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24">
         <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-start max-w-6xl w-full mx-auto px-4">

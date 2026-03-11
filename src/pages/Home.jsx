@@ -2,6 +2,7 @@ import React from 'react'
 import { skills, works, profile, social, about } from '../content'
 import { NavLink } from 'react-router-dom';
 import ProjectCard from '../components/ProjectCard';
+import SEO from '../components/SEO';
 
 export default function Home() {
 
@@ -9,6 +10,12 @@ export default function Home() {
 
     return(
         <div className="pt-16">
+            <SEO 
+              title="Tushar Rai | Co-Founder & Developer" 
+              description={about.shortDescription} 
+              name={profile.name} 
+              type="website" 
+            />
             {/* Hero Section */}
             <section className="min-h-[85vh] flex items-center py-16 md:py-24">
                 <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center max-w-6xl w-full mx-auto px-4">

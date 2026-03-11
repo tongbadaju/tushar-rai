@@ -1,10 +1,17 @@
 import React from 'react'
 import { works } from '../content';
 import ProjectCard from '../components/ProjectCard';
+import SEO from '../components/SEO';
 
 export default function Works() {
   return (
     <div className="pt-16">
+      <SEO 
+        title="Works | Tushar Rai" 
+        description="A collection of projects I've built. I invite you to explore my work and see my dedication to building great digital experiences." 
+        name="Tushar Rai" 
+        type="website" 
+      />
       {/* Header Section */}
       <section className="py-16 lg:py-24">
         <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-start max-w-6xl w-full mx-auto px-4">

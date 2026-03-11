@@ -42,7 +42,7 @@ export default function Header() {
           className="hover:opacity-80 transition-opacity duration-300"
           aria-label="Tushar"
         >
-          <img src="/icon-secondary.svg" alt="TR" className="h-6.5 w-6.5" />
+          <img src="/logo.svg" alt="TR" className="h-6.5 w-6.5" />
         </NavLink>
 
         {/* Desktop Navigation */}
