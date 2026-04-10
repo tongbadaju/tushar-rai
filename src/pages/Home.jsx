@@ -113,7 +113,7 @@ export default function Home() {
                                 width="384" 
                                 height="480" 
                                 className="relative max-w-sm w-full rounded-2xl shadow-2xl" 
-                                src="images/avatar.avif" 
+                                src="images/avatar.jpg" 
                                 alt="Tushar Rai" 
                                 fetchpriority="high"
                             />

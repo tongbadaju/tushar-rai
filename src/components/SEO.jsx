@@ -17,7 +17,7 @@ export default function SEO({ title, description, name, type }) {
       <meta property="og:url" content={currentUrl} />
       <meta property="og:site_name" content={name || 'Tushar Rai'} />
       {/* Assuming there's a default OG image we might use later, normally pointed to a public URL */}
-      {/* <meta property="og:image" content="https://yourdomain.com/images/avatar.avif" /> */}
+      {/* <meta property="og:image" content="https://yourdomain.com/images/avatar.jpg" /> */}
 
       {/* Twitter tags */}
       <meta name="twitter:creator" content={name || 'Tushar Rai'} />
